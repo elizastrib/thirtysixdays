@@ -1,6 +1,7 @@
-@import "reset";
+// @import "reset";
 @import "typography";
 @import "textcolors";
+@import "mixins";
 
 
 $body-font: "Bandeins Strange";
@@ -13,30 +14,7 @@ $body-size: 30px;
     100% {
         transform: rotate(-15deg);
     }
-
-
-@mixin fade-transition($style) { transition: $style 0.5s; }
-@mixin variable-font($weight,$width) {
-    font-variation-settings: "wght" $weight, "wdth" $width;
 }
-@mixin center() {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-@mixin colors($background,$color) {
-    background-color: $background;
-    color: $color;
-}
-@mixin rotate-animation($speed) {
-    animation: rotate $speed ease-in-out infinite alternate;
-};
-
-
-
-
-
 
 
 body {
@@ -145,6 +123,7 @@ section {
     }
     &#p {
         @include colors($p-cl,$p-bg);
+        transform: rotate(-15deg);
     }
     &#q {
         @include colors($q-cl,$q-bg);
@@ -213,10 +192,19 @@ div.container {
     height: 100vh;
 
     &.o {
-        @include colors($o-cl,$o-bg)
+        @include colors($o-cl,$o-bg);
     }
     &.p {
-        @include colors($p-cl,$p-bg)
+        @include colors($p-cl,$p-bg);
+    }
+    &.q {
+        @include colors($q-cl,$q-bg);
+    }
+    &.r {
+        @include colors($r-cl,$r-bg);
+    }
+    &.s {
+        @include colors($s-cl,$s-bg);
     }
 }
-}
+

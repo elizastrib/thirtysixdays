@@ -1,17 +1,238 @@
-/* Error: Expected "to" or "from".
- *    ,
- * 42 | body{
- *    | ^
- *    '
- *   css/app.scss 42:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Expected "to" or "from".\a    \2577 \a 42 \2502  body{\a    \2502  ^\a    \2575 \a   css/app.scss 42:1  root stylesheet';
+@font-face {
+  font-family: "Bandeins Strange";
+  src: url(fonts/bandeins-strange-variable.ttf);
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+body {
+  font-family: "Bandeins Strange";
+  line-height: 1.5;
+  font-size: 30px;
+  text-align: center;
+}
+
+ul.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  z-index: 5;
+  background-color: #ffffff;
+}
+ul.nav li {
+  display: inline;
+}
+ul.nav li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  font-variation-settings: "wght" 100, "wdth" 100;
+  transition: font-variation-settings 0.5s;
+}
+ul.nav li a:hover {
+  font-variation-settings: "wght" 900, "wdth" 200;
+}
+ul.nav li.active a {
+  font-variation-settings: "wght" 900, "wdth" 900;
+  opacity: 0.5;
+}
+ul.nav li.restricted a {
+  opacity: 0.2;
+}
+ul.nav li.restricted a:hover {
+  font-variation-settings: "wght" 100, "wdth" 100;
+}
+
+canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 60px;
+}
+section#a {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#b {
+  background-color: #ffffff;
+  color: #000000;
+}
+section#c {
+  background-color: #DA4E00;
+  color: #F5E1CE;
+  height: 1000px;
+}
+section#d {
+  background-color: #FFD3D3;
+  color: #302449;
+}
+section#e {
+  background-color: #CF0000;
+  color: #ffffff;
+}
+section#f {
+  background-color: #D6F0FF;
+  color: #ff4da2;
+}
+section#g {
+  background-color: #B7A5FD;
+  color: #DED6FF;
+}
+section#h {
+  background-color: #c4fff3;
+  color: #0b3f35;
+}
+section#i {
+  background-color: #e84e3c;
+  color: #e8dad9;
+}
+section#j {
+  background-color: #ff4480;
+  color: #2c0303;
+}
+section#k {
+  background-color: #6fd1ff;
+  color: #d6f2ff;
+}
+section#l {
+  background-color: #fff79b;
+  color: #000000;
+}
+section#m {
+  background-color: #bd2828;
+  color: #d8c9be;
+}
+section#n {
+  background-color: #ffd1ff;
+  color: #2d4be7;
+}
+section#o {
+  background-color: #403353;
+  color: #cbbcce;
+  animation: rotate 2s ease-in-out infinite alternate;
+}
+section#p {
+  background-color: #E9E9E9;
+  color: #F46E6E;
+  transform: rotate(-15deg);
+}
+section#q {
+  background-color: #7BA4B1;
+  color: #E0F9ED;
+}
+section#r {
+  background-color: #FDA5B5;
+  color: #7BA4B1;
+}
+section#s {
+  background-color: #E0F0F9;
+  color: #FFD057;
+}
+section#t {
+  background-color: #CECDFF;
+  color: #541919;
+}
+section#u {
+  background-color: #083C0D;
+  color: #F8E0F9;
+}
+section#v {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#w {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#x {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#y {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#z {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#zero {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#one {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#two {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#three {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#four {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#five {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#six {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#seven {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#eight {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+section#nine {
+  background-color: #ffe2e2;
+  color: #0000ff;
+}
+
+div.container {
+  width: 100vw;
+  height: 100vh;
+}
+div.container.o {
+  background-color: #403353;
+  color: #cbbcce;
+}
+div.container.p {
+  background-color: #E9E9E9;
+  color: #F46E6E;
+}
+div.container.q {
+  background-color: #7BA4B1;
+  color: #E0F9ED;
+}
+div.container.r {
+  background-color: #FDA5B5;
+  color: #7BA4B1;
+}
+div.container.s {
+  background-color: #E0F0F9;
+  color: #FFD057;
+}
+
+/*# sourceMappingURL=app.css.map */
