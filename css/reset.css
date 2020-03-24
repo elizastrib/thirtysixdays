@@ -23,25 +23,20 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
 ol, ul {
   list-style: none;
 }
-
 blockquote, q {
   quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
+  content: '';
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -63,41 +58,3 @@ input, textarea, select {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-
-@font-face {
-  font-family: "Bandeins Strange";
-  src: url(fonts/bandeins-strange-variable.ttf);
-}
-body {
-  background-color: #3900f5;
-  color: #ffffff;
-  font-family: "Bandeins Strange";
-  line-height: 1.5;
-  font-size: 24px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 80px;
-}
-
-a {
-  color: #3900f5;
-}
-
-section {
-  background-color: white;
-  color: #3900f5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 50vw;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 40px;
-}
-section p {
-  margin: 24px 0;
-}
-
-/*# sourceMappingURL=app.css.map */
