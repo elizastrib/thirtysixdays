@@ -31,7 +31,7 @@ $body-size: 30px;
 }
 @mixin rotate-animation($speed) {
     animation: rotate $speed ease-in-out infinite alternate;
-}
+};
 
 
 
@@ -218,4 +218,5 @@ div.container {
     &.p {
         @include colors($p-cl,$p-bg)
     }
-}}
+}
+}
