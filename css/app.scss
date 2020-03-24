@@ -1,55 +1,221 @@
 @import "reset";
 @import "typography";
+@import "textcolors";
 
 
-
-$primary-color: #3900f5;
 $body-font: "Bandeins Strange";
-$body-size: 24px;
+$body-size: 30px;
+
+@keyframes rotate {
+    0% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(-15deg);
+    }
 
 
-@mixin drop-shadow($color) {
-    box-shadow: 0 0 10px $color;
+@mixin fade-transition($style) { transition: $style 0.5s; }
+@mixin variable-font($weight,$width) {
+    font-variation-settings: "wght" $weight, "wdth" $width;
 }
+@mixin center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin colors($background,$color) {
+    background-color: $background;
+    color: $color;
+}
+@mixin rotate-animation($speed) {
+    animation: rotate $speed ease-in-out infinite alternate;
+}
+
+
+
 
 
 
 
 body {
-    background-color: $primary-color; 
-    color: #ffffff;
-
     font-family: $body-font;
     line-height: 1.5;
     font-size: $body-size;
     text-align: center;
-
-}
-
-h1 {
-    font-size: 80px;
-}
-
-a {
-    color: $primary-color;
 }
 
 
+ul.nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    z-index: 5;
+    background-color: #ffffff;
 
-section {
-    background-color: white;
-    color: $primary-color;
+    li {
+        display: inline;
 
-    @include drop-shadow(rgba(0,0,0,0.5));
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #000000;
+  
+            @include variable-font(100,100);
+            @include fade-transition(font-variation-settings);
 
-    width:50vw;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
+            &:hover {
+                @include variable-font(900,200);
+            }
+        }  
+        
+        &.active a {
+            @include variable-font(900,900);
+            opacity: 0.5;
+        }
 
-    p {
-        margin: 24px 0;
+        &.restricted a {
+            opacity: 0.2;
+
+            &:hover {
+                @include variable-font(100,100);
+            }
+        }
     }
 }
+
+canvas {
+    @include center();
+}
+
+section {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 60px;
+
+    &#a {
+        @include colors($a-cl,$a-bg);
+    }
+    &#b {
+        @include colors($b-cl,$b-bg);
+    }
+    &#c {
+        @include colors($c-cl,$c-bg);
+        height: 1000px;
+    }
+    &#d {
+        @include colors($d-cl,$d-bg);
+    }
+    &#e {
+        @include colors($e-cl,$e-bg);
+    }
+    &#f {
+        @include colors($f-cl,$f-bg);
+    }
+    &#g {
+        @include colors($g-cl,$g-bg);
+    }
+    &#h {
+        @include colors($h-cl,$h-bg);
+    }
+    &#i {
+        @include colors($i-cl,$i-bg);
+    }
+    &#j {
+        @include colors($j-cl,$j-bg);
+    }
+    &#k {
+        @include colors($k-cl,$k-bg);
+    }
+    &#l {
+        @include colors($l-cl,$l-bg);
+    }
+    &#m {
+        @include colors($m-cl,$m-bg);
+    }
+    &#n {
+        @include colors($n-cl,$n-bg);
+    }
+    &#o {
+        @include colors($o-cl,$o-bg);
+        @include rotate-animation(2s);
+    }
+    &#p {
+        @include colors($p-cl,$p-bg);
+    }
+    &#q {
+        @include colors($q-cl,$q-bg);
+    }
+    &#r {
+        @include colors($r-cl,$r-bg);
+    }
+    &#s {
+        @include colors($s-cl,$s-bg);
+    }
+    &#t {
+        @include colors($t-cl,$t-bg);
+    }
+    &#u {
+        @include colors($u-cl,$u-bg);
+    }
+    &#v {
+        @include colors($v-cl,$v-bg);
+    }
+    &#w {
+        @include colors($w-cl,$w-bg);
+    }
+    &#x {
+        @include colors($x-cl,$x-bg);
+    }
+    &#y {
+        @include colors($y-cl,$y-bg);
+    }
+    &#z {
+        @include colors($z-cl,$z-bg);
+    }
+    &#zero {
+        @include colors($zero-cl,$zero-bg);
+    }
+    &#one {
+        @include colors($one-cl,$one-bg);
+    }
+    &#two {
+        @include colors($two-cl,$two-bg);
+    }
+    &#three {
+        @include colors($three-cl,$three-bg);
+    }
+    &#four {
+        @include colors($four-cl,$four-bg);
+    }
+    &#five {
+        @include colors($five-cl,$five-bg);
+    }
+    &#six {
+        @include colors($six-cl,$six-bg);
+    }
+    &#seven {
+        @include colors($seven-cl,$seven-bg);
+    }
+    &#eight {
+        @include colors($eight-cl,$eight-bg);
+    }
+    &#nine {
+        @include colors($nine-cl,$nine-bg);
+    }
+}
+
+div.container {
+    width: 100vw;
+    height: 100vh;
+
+    &.o {
+        @include colors($o-cl,$o-bg)
+    }
+    &.p {
+        @include colors($p-cl,$p-bg)
+    }
+}}
