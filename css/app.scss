@@ -1,0 +1,55 @@
+@import "reset";
+@import "typography";
+
+
+
+$primary-color: #3900f5;
+$body-font: "Bandeins Strange";
+$body-size: 24px;
+
+
+@mixin drop-shadow($color) {
+    box-shadow: 0 0 10px $color;
+}
+
+
+
+
+body {
+    background-color: $primary-color; 
+    color: #ffffff;
+
+    font-family: $body-font;
+    line-height: 1.5;
+    font-size: $body-size;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 80px;
+}
+
+a {
+    color: $primary-color;
+}
+
+
+
+section {
+    background-color: white;
+    color: $primary-color;
+
+    @include drop-shadow(rgba(0,0,0,0.5));
+
+    width:50vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+
+    p {
+        margin: 24px 0;
+    }
+}
