@@ -14,7 +14,7 @@
     transform: translate(-50%, -50%);
 }
 
-@mixin colors($background,$color) {
+@mixin colors($color, $background) {
     background-color: $background;
     color: $color;
 }

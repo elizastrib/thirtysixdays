@@ -18,8 +18,10 @@
   "homepage": "https://github.com/elizastrib/thirtysixdays#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "2.1.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
