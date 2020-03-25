@@ -1,4 +1,4 @@
-// @import "reset";
+@import "reset";
 @import "typography";
 @import "textcolors";
 @import "mixins";
@@ -22,6 +22,7 @@ body {
     line-height: 1.5;
     font-size: $body-size;
     text-align: center;
+    background-color: lightcyan;
 }
 
 
@@ -30,7 +31,7 @@ ul.nav {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 50px;
+    height: 100%;
     z-index: 5;
     background-color: #ffffff;
 
