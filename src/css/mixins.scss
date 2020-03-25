@@ -1,0 +1,24 @@
+
+@mixin fade-transition($style) { 
+    transition: $style 0.5s; 
+}
+
+@mixin variable-font($weight,$width) {
+    font-variation-settings: "wght" $weight, "wdth" $width;
+}
+
+@mixin center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin colors($background,$color) {
+    background-color: $background;
+    color: $color;
+}
+
+@mixin rotate-animation($speed) {
+    animation: rotate $speed ease-in-out infinite alternate;
+}

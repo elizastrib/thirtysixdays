@@ -1,0 +1,211 @@
+@import "reset";
+@import "typography";
+@import "textcolors";
+@import "mixins";
+
+
+$body-font: "Bandeins Strange";
+$body-size: 30px;
+
+@keyframes rotate {
+    0% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(-15deg);
+    }
+}
+
+
+body {
+    font-family: $body-font;
+    line-height: 1.5;
+    font-size: $body-size;
+    text-align: center;
+    background-color: lightcyan;
+}
+
+
+ul.nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 5;
+    background-color: #ffffff;
+
+    li {
+        display: inline;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #000000;
+  
+            @include variable-font(100,100);
+            @include fade-transition(font-variation-settings);
+
+            &:hover {
+                @include variable-font(900,200);
+            }
+        }  
+        
+        &.active a {
+            @include variable-font(900,900);
+            opacity: 0.5;
+        }
+
+        &.restricted a {
+            opacity: 0.2;
+
+            &:hover {
+                @include variable-font(100,100);
+            }
+        }
+    }
+}
+
+canvas {
+    @include center();
+}
+
+section {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 60px;
+
+    &#a {
+        @include colors($a-cl,$a-bg);
+    }
+    &#b {
+        @include colors($b-cl,$b-bg);
+    }
+    &#c {
+        @include colors($c-cl,$c-bg);
+        height: 1000px;
+    }
+    &#d {
+        @include colors($d-cl,$d-bg);
+    }
+    &#e {
+        @include colors($e-cl,$e-bg);
+    }
+    &#f {
+        @include colors($f-cl,$f-bg);
+    }
+    &#g {
+        @include colors($g-cl,$g-bg);
+    }
+    &#h {
+        @include colors($h-cl,$h-bg);
+    }
+    &#i {
+        @include colors($i-cl,$i-bg);
+    }
+    &#j {
+        @include colors($j-cl,$j-bg);
+    }
+    &#k {
+        @include colors($k-cl,$k-bg);
+    }
+    &#l {
+        @include colors($l-cl,$l-bg);
+    }
+    &#m {
+        @include colors($m-cl,$m-bg);
+    }
+    &#n {
+        @include colors($n-cl,$n-bg);
+    }
+    &#o {
+        @include colors($o-cl,$o-bg);
+        @include rotate-animation(2s);
+    }
+    &#p {
+        @include colors($p-cl,$p-bg);
+        transform: rotate(-15deg);
+    }
+    &#q {
+        @include colors($q-cl,$q-bg);
+    }
+    &#r {
+        @include colors($r-cl,$r-bg);
+    }
+    &#s {
+        @include colors($s-cl,$s-bg);
+    }
+    &#t {
+        @include colors($t-cl,$t-bg);
+    }
+    &#u {
+        @include colors($u-cl,$u-bg);
+    }
+    &#v {
+        @include colors($v-cl,$v-bg);
+    }
+    &#w {
+        @include colors($w-cl,$w-bg);
+    }
+    &#x {
+        @include colors($x-cl,$x-bg);
+    }
+    &#y {
+        @include colors($y-cl,$y-bg);
+    }
+    &#z {
+        @include colors($z-cl,$z-bg);
+    }
+    &#zero {
+        @include colors($zero-cl,$zero-bg);
+    }
+    &#one {
+        @include colors($one-cl,$one-bg);
+    }
+    &#two {
+        @include colors($two-cl,$two-bg);
+    }
+    &#three {
+        @include colors($three-cl,$three-bg);
+    }
+    &#four {
+        @include colors($four-cl,$four-bg);
+    }
+    &#five {
+        @include colors($five-cl,$five-bg);
+    }
+    &#six {
+        @include colors($six-cl,$six-bg);
+    }
+    &#seven {
+        @include colors($seven-cl,$seven-bg);
+    }
+    &#eight {
+        @include colors($eight-cl,$eight-bg);
+    }
+    &#nine {
+        @include colors($nine-cl,$nine-bg);
+    }
+}
+
+div.container {
+    width: 100vw;
+    height: 100vh;
+
+    &.o {
+        @include colors($o-cl,$o-bg);
+    }
+    &.p {
+        @include colors($p-cl,$p-bg);
+    }
+    &.q {
+        @include colors($q-cl,$q-bg);
+    }
+    &.r {
+        @include colors($r-cl,$r-bg);
+    }
+    &.s {
+        @include colors($s-cl,$s-bg);
+    }
+}
+
