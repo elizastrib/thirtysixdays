@@ -5,6 +5,7 @@ var cleanCSS = require('gulp-clean-css')
 var sourcemaps = require('gulp-sourcemaps')
 var browsersync = require('browser-sync').create()
 var imagemin = require('gulp-imagemin')
+var ghpages = require('gh-pages')
 
 sass.compiler = require('node-sass');
 
@@ -29,6 +30,16 @@ gulp.task('sass', function() {
 gulp.task('html', function() {
     return gulp.src('src/*.html')
         .pipe(gulp.dest('dist'))
+})
+
+gulp.task('js', function() {
+    return gulp.src('src/js/*.js')
+        .pipe(gulp.dest('dist/js'))
+})
+
+gulp.task('p5', function() {
+    return gulp.src('src/js/letters/*.js')
+        .pipe(gulp.dest('dist/js/letters'))
 })
 
 
@@ -59,10 +70,19 @@ gulp.task('watch', function() {
 
     gulp.watch('src/*.html', gulp.series('html')).on('change', browsersync.reload)
     gulp.watch('src/css/app.scss', gulp.series('sass'))
+    gulp.watch('src/js/*.js', gulp.series('js'))
+    gulp.watch('src/js/letters/*.js', gulp.series('p5'))
     gulp.watch('src/fonts/*', gulp.series('fonts'))
     gulp.watch('src/img/*', gulp.series('images'))
 })
 
 
-const build = gulp.series(['html', 'sass', 'fonts', 'images', 'watch'])
+gulp.task('deploy', async function() {
+    ghpages.publish('dist', function(err) {})
+})
+
+
+
+
+const build = gulp.series(['html', 'sass', 'js', 'p5', 'fonts', 'images', 'watch'])
 gulp.task('default', build)
