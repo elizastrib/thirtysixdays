@@ -5,14 +5,64 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="app.css">
     </head>
-    <body>
+    <body class="intro">
 
-        @@include('./templates/nav.html')
+        <div class="letters">
+            @@include('./templates/homeletters.html',{"letter": "a", "display":"A", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "b", "display":"B", "cl":"#ffffff", "bg":"#000000"})
+            @@include('./templates/homeletters.html',{"letter": "c", "display":"C", "cl":"#DA4E00", "bg":"#F5E1CE"})
+            @@include('./templates/homeletters.html',{"letter": "d", "display":"D", "cl":"#FFD3D3", "bg":"#302449"})
+            @@include('./templates/homeletters.html',{"letter": "e", "display":"E", "cl":"#CF0000", "bg":"#ffffff"})
+            @@include('./templates/homeletters.html',{"letter": "f", "display":"F", "cl":"#D6F0FF", "bg":"#ff4da2"})
+            @@include('./templates/homeletters.html',{"letter": "g", "display":"G", "cl":"#B7A5FD", "bg":"#DED6FF"})
+            @@include('./templates/homeletters.html',{"letter": "h", "display":"H", "cl":"#c4fff3", "bg":"#0b3f35"})
+            @@include('./templates/homeletters.html',{"letter": "i", "display":"I", "cl":"#e84e3c", "bg":"#e8dad9"})
+            @@include('./templates/homeletters.html',{"letter": "j", "display":"J", "cl":"#ff4480", "bg":"#2c0303"})
+            @@include('./templates/homeletters.html',{"letter": "k", "display":"K", "cl":"#6fd1ff", "bg":"#d6f2ff"})
+            @@include('./templates/homeletters.html',{"letter": "l", "display":"L", "cl":"#fff79b", "bg":"#000000"})
+            @@include('./templates/homeletters.html',{"letter": "m", "display":"M", "cl":"#bd2828", "bg":"#d8c9be"})
+            @@include('./templates/homeletters.html',{"letter": "n", "display":"N", "cl":"#ffd1ff", "bg":"#2d4be7"})
+            @@include('./templates/homeletters.html',{"letter": "o", "display":"O", "cl":"#403353", "bg":"#cbbcce"})
+            @@include('./templates/homeletters.html',{"letter": "p", "display":"P", "cl":"#E9E9E9", "bg":"#F46E6E"})
+            @@include('./templates/homeletters.html',{"letter": "q", "display":"Q", "cl":"#7BA4B1", "bg":"#E0F9ED"})
+            @@include('./templates/homeletters.html',{"letter": "r", "display":"R", "cl":"#FDA5B5", "bg":"#864E0C"})
+            @@include('./templates/homeletters.html',{"letter": "s", "display":"S", "cl":"#FFD057", "bg":"#E0F0F9"})
+            @@include('./templates/homeletters.html',{"letter": "t", "display":"T", "cl":"#CECDFF", "bg":"#541919"})
+            @@include('./templates/homeletters.html',{"letter": "u", "display":"U", "cl":"#083C0D", "bg":"#F8E0F9"})
+            @@include('./templates/homeletters.html',{"letter": "v", "display":"V", "cl":"#DDF3DF", "bg":"#24173F"})
+            @@include('./templates/homeletters.html',{"letter": "w", "display":"W", "cl":"#FF9494", "bg":"#F9E2ED"})
+            <!-- @@include('./templates/homeletters.html',{"letter": "x", "display":"X", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "y", "display":"Y", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "z", "display":"Z", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "zero", "display":"0", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "one", "display":"1", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "two", "display":"2", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "three", "display":"3", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "four", "display":"4", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "five", "display":"5", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "six", "display":"6", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "seven", "display":"7", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "eight", "display":"8", "cl":"#0000ff", "bg":"#ffe2e2"})
+            @@include('./templates/homeletters.html',{"letter": "nine", "display":"9", "cl":"#0000ff", "bg":"#ffe2e2"}) -->
 
-        <section>
-            <h1>36 Days of Type</h1>
-            <p>Thirty six kinetic typography experiments, made by <a href="https://www.elizastribling.com/">Eliza Stribling</a> with P5JS.</p>
-            <p>Site launching this week!</p>
-        </section>  
+            
+
+        </div>
+
+        <span class="about">about</span>
+
+        <div class = "about">
+            <div>
+                <p>Thirty Six Days of (Kinetic) Type was created by <a href="https://www.elizastribling.com/">Eliza Stribling</a>, as part of the global <a href="http://www.36daysoftype.com/">36 Days of Type</a> project in March and April 2020. It was built using P5JS, skills learnt with <a href="https://www.superhi.com/">SuperHi</a>, and a little bit of magic.</p>
+            </div>
+            <span>close</span>
+        </div>
+
+          
+        <script src="js/p5.min.js"></script>
+        <script src="js/easing.js"></script>
+        <script src="js/intro.js"></script> 
+        <script src="js/toggleabout.js"></script>
+
     </body>
 </html>
