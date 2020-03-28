@@ -19,7 +19,7 @@ function setup () {
 
 function draw () {
   
-  background("#ffffff")
+  background("#EDEDED")
   
   const tileSize = 5
   
