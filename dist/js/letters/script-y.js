@@ -10,11 +10,11 @@ function setup () {
   
   letterY = createGraphics(600,600)
   
-  letterY.textSize(800)
+  letterY.textSize(700)
   letterY.textAlign(CENTER, CENTER)
   letterY.fill("#FFBA94") 
   letterY.textFont (font) 
-  letterY.text("Y", 300, 240)
+  letterY.text("Y", 300, 200)
 }
 
 function draw () {
