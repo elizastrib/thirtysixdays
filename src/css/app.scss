@@ -8,6 +8,9 @@ $body-font: "Bandeins Strange";
 $body-size: 30px;
 $primary-color: #3900f5;
 
+$mobile: 640px;
+
+
 @keyframes rotate {
     0% {
         transform: rotate(15deg);
@@ -37,6 +40,10 @@ ul.nav {
     padding: 10px;
     z-index: 5;
     background-color: #ffffff;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 24px;
+    }
 
     li {
         display: inline;
@@ -81,6 +88,9 @@ ul.nav {
 
 canvas {
     @include center();
+    @media screen and (max-width: $mobile) {
+        transform: scale(0.7, 0.7) translate(-72%, -72%);
+    }
 }
 
 section {
@@ -240,6 +250,10 @@ body.intro {
         z-index: -1;
         opacity:0.3;
         transition: opacity 0.05s;
+
+        @media screen and (max-width: $mobile) {
+            transform: scale(0.5, 0.5) translate(-100%, -100%) rotate(90deg);
+        }
     }
 
     span {
@@ -250,6 +264,12 @@ body.intro {
 
         &:hover {
             cursor: pointer;
+        }
+
+        @media screen and (max-width: $mobile) {
+            top: unset;
+            bottom: 40px;
+            right: 40px;
         }
     }
 
@@ -272,10 +292,21 @@ div.letters {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
 
+    @media screen and (max-width: $mobile) {
+        width: 95%;
+        font-size: 60px;
+        grid-template-columns: auto auto auto auto;
+    }
+
     div {
         width:120px;
         height: 120px;
         color: #ffffff;
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+            height: 100%;
+        }
 
 
         a {
@@ -314,6 +345,11 @@ div.about {
         @include center;
         width:65%;
         padding: 60px;
+
+        @media screen and (max-width: $mobile) {
+            width: 80%;
+            padding: 20px;
+        }
 
 
         a {
