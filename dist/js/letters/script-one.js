@@ -1,4 +1,4 @@
-let z
+let one
 
 
 function preload () {
@@ -7,15 +7,15 @@ function preload () {
 
 function setup () {
   var canvas = createCanvas(800, 800)
-  canvas.parent('z')
+  canvas.parent('one')
   
-  z = createGraphics(800,800)
+  one = createGraphics(800,800)
   
-  z.textSize(850)
-  z.textAlign(CENTER, CENTER)
-  z.fill("#DD95FF") 
-  z.textFont (font) 
-  z.text("Z", 400, 320)
+  one.textSize(850)
+  one.textAlign(CENTER, CENTER)
+  one.fill("#DD95FF") 
+  one.textFont (font) 
+  one.text("Z", 400, 320)
 }
 
 function draw () {
@@ -41,7 +41,7 @@ function draw () {
       const dw = tileSize
       const dh = tileSize
       
-      image (z, dx, dy, dw, dh, sx, sy, sw, sh)
+      image (one, dx, dy, dw, dh, sx, sy, sw, sh)
     }
   }
 }
