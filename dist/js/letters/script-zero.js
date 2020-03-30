@@ -1,21 +1,21 @@
-let z
+let zero
 
 
 function preload () {
-  font = loadFont("fonts/archivoblack-regular.ttf")
+  font = loadFont("fonts/SpaceMono-Bold.ttf")
 }
 
 function setup () {
   var canvas = createCanvas(800, 800)
-  canvas.parent('z')
+  canvas.parent('zero')
   
-  z = createGraphics(800,800)
+  zero = createGraphics(800,800)
   
-  z.textSize(850)
-  z.textAlign(CENTER, CENTER)
-  z.fill("#DD95FF") 
-  z.textFont (font) 
-  z.text("Z", 400, 320)
+  zero.textSize(850)
+  zero.textAlign(CENTER, CENTER)
+  zero.fill("#000000") 
+  zero.textFont (font) 
+  zero.text("0", 400, 240)
 }
 
 function draw () {
@@ -26,11 +26,13 @@ function draw () {
   
   for (let x=0; x<160; x=x+1) { 
     for (let y=0; y<160; y=y+1) { 
-      
-      const distortion = cos(frameCount * 1 + x * 0.4 + y * 0.4) * 10
+
+      const wave = (winMouseX*0.07) * -0.3
+
+      const distortion = sin(frameCount * 0.1 + x + y * 0.3) * wave
       
       //source
-      const sx = x * tileSize - distortion * 5
+      const sx = x * tileSize - distortion
       const sy = y * tileSize + distortion
       const sw = tileSize
       const sh = tileSize
@@ -41,7 +43,7 @@ function draw () {
       const dw = tileSize
       const dh = tileSize
       
-      image (z, dx, dy, dw, dh, sx, sy, sw, sh)
+      image (zero, dx, dy, dw, dh, sx, sy, sw, sh)
     }
   }
 }

@@ -233,6 +233,13 @@ div.container {
     }
 }
 
+input {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 20;
+}
 
 body.intro {
     overflow: hidden auto;
