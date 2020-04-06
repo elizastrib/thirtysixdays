@@ -1,7 +1,7 @@
 let seven
 
 function preload () {
-  font = loadFont("fonts/fredokaone-regular.ttf")
+  font = loadFont("fonts/SpaceMono-Bold.ttf")
 }
 
 function setup () {
